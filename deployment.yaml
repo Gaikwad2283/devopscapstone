@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: priyanka-image-deployment
+spec:
+  replicas: 1  # Number of Pods to deploy
+  selector:
+    matchLabels:
+      app: priyanka-image
+  template:
+    metadata:
+      labels:
+        app: priyanka-image
+    spec:
+      containers:
+      - name: priyanka-image
+        image: priyanka228/priyanka-image:v1  # Replace with your image name and tag
+        ports:
+        - containerPort: 8080  # Port your app is exposed on

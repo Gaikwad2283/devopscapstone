@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "trades")
-public class Trades {  // Renamed from 'trades' to 'Trades'
+public class Trades {  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long tradeId;
